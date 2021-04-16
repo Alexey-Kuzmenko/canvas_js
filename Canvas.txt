@@ -1,0 +1,100 @@
+CANVAS
+--
+Canvas ----> элемент html с помощью которого можно рисовать любые объекти и фигуры
+--
+Создание canvas
+<canvas id="canvas" width="200" height="200"></canvas>
+--
+Работа с canvas
+//!Вызываем DOM элемент по его id и сохраняем в переменной
+const canvas = document.getElementById("canvas")
+--
+Получаем контекст рисования
+Контекст рисования ----> это JS объект который имеет свои свойства и методы при помощи которых можно рисовать 
+//! ctx - context
+//вызываем для элемента canvas метод getContext и указываем что изображение будет двухмерное 
+const ctx = canvas.getContext("2d")
+ctx.fillRect(0, 0, 10, 10)
+--
+Рисуем с помощью canvas
+//! вызываем метод fillRect(Rect - rectangle прямоугольник)
+ctx.fillRect(0, 0, 10, 10)
+ctx.fillRect(0, 0, ----> координаты по x и y(размещение на странице)
+10, 10) ----> размеры прямоугольника 10X10
+--
+Рисуем несколько квадратов с помощью цикла 
+const ctx = canvas.getContext("2d")
+
+for (let i = 0; i < 8; i++){
+    ctx.fillRect(i * 10, i * 10, 10, 10)
+}
+--
+Изминение цвета
+ ctx.fillStyle = "Red" ----> изменяет цвет элемента | после применения этого метода то новые созданные элементы будут такоже цвета пока снова не поменять свойство на другой цвет 
+--
+Рисование контуров прямоугольника 
+strokeRect ----> метод для обводки контура прямоугольника 
+//Stroke - здесь "контур"
+Пример кода :
+const canvas = document.getElementById("canvas")
+
+const ctx = canvas.getContext("2d")
+//ctx.fillStyle = "Red"
+ctx.strokeRect(10, 10, 100, 20)
+//change color
+ctx.strokeStyle = "Red" 
+//меняем ширину контура 
+ctx.lineWidth = 4
+--
+Рисуем линии и пути 
+Путем ----> называють последовательность линий на холсте 
+Пример кода :
+
+const canvas = document.getElementById("canvas")
+const ctx = canvas.getContext("2d")
+// ! line colr & line width 
+ctx.strokeStyle = "Turquoise"
+ctx.lineWidth = 4
+// ! start of paht
+ctx.beginPath()
+// ! change starting position 
+ctx.moveTo(10, 10)
+// ! draw line 
+ctx.lineTo(60, 60)
+// ! change starting position 
+ctx.moveTo(60, 10)
+// ! draw line
+ctx.lineTo(10, 60)
+//метод обводки путей 
+ctx.stroke()
+--
+Заливка путей
+//fill - заливка  
+fill ----> метод для заливки путей 
+Пример кода:
+const canvas = document.getElementById("canvas")
+
+const ctx = canvas.getContext("2d")
+ctx.fillStyle = "Blue"
+ctx.beginPath()
+ctx.moveTo(100, 100)
+ctx.lineTo(100, 60)
+ctx.lineTo(130, 30)
+ctx.lineTo(160, 60)
+ctx.lineTo(160, 60)
+ctx.lineTo(160, 100)
+ctx.lineTo(100, 100)
+// выполняем заливку путей 
+ctx.fill()
+
+
+
+
+
+
+
+
+
+
+
+

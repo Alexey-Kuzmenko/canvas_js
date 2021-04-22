@@ -52,16 +52,68 @@
 // ctx.lineTo(10, 60)
 // ctx.stroke()
 // * draw home 
-const canvas = document.getElementById("canvas")
+// const canvas = document.getElementById("canvas")
 
+// const ctx = canvas.getContext("2d")
+// ctx.fillStyle = "Blue"
+// ctx.beginPath()
+// ctx.moveTo(100, 100)
+// ctx.lineTo(100, 60)
+// ctx.lineTo(130, 30)
+// ctx.lineTo(160, 60)
+// ctx.lineTo(160, 60)
+// ctx.lineTo(160, 100)
+// ctx.lineTo(100, 100)
+// ctx.fill()
+// * draw circle 
+// const canvas = document.getElementById("canvas")
+// const ctx = canvas.getContext("2d")
+// ctx.fillStyle = "Blue"
+
+// ctx.beginPath()
+// ctx.arc(50, 50, 20, 0, Math.PI / 2, false)
+// ctx.stroke()
+
+// ctx.beginPath()
+// ctx.arc(100, 50, 20, 0, Math.PI, false)
+// ctx.stroke()
+
+// ctx.beginPath()
+// ctx.arc(150, 50, 20, 0, Math.PI * 2, false)
+// ctx.stroke()
+
+// * draw circle with function 
+const canvas = document.getElementById("canvas")
 const ctx = canvas.getContext("2d")
 ctx.fillStyle = "Blue"
-ctx.beginPath()
-ctx.moveTo(100, 100)
-ctx.lineTo(100, 60)
-ctx.lineTo(130, 30)
-ctx.lineTo(160, 60)
-ctx.lineTo(160, 60)
-ctx.lineTo(160, 100)
-ctx.lineTo(100, 100)
-ctx.fill()
+
+    // function circle(x, y, radius) { 
+    //     ctx.beginPath()
+    //     ctx.arc(x, y, radius, 0, Math.PI * 2, false)
+    //     ctx.stroke()
+    // }
+// circle(10, 20, 40)
+// ctx.lineWidth = 4;
+// ctx.strokeStyle = "Red";
+// circle(100, 100, 10);
+// ctx.strokeStyle = "Orange";
+// circle(100, 100, 20);
+// ctx.strokeStyle = "Yellow";
+// circle(100, 100, 30);
+// ctx.strokeStyle = "Green";
+// circle(100, 100, 40);
+// ctx.strokeStyle = "Blue";
+// circle(100, 100, 50);
+// ctx.strokeStyle = "Purple";
+// circle(100, 100, 60);
+
+// * draw snowman 
+function snowMan(x, y, radius) { 
+    ctx.beginPath()
+    ctx.arc(x, y, radius, 0, Math.PI * 2, false)
+    ctx.stroke()
+}
+
+snowMan(70, 30, 20)
+snowMan(70, 90, 40)
+
